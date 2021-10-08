@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<context:component-scan base-package="test01"/>
+	<!-- component-scan해당 패키지 아래 모든 클래스를 스캔해서 Bean으로 등록-->
+	<!-- 각 클래스 위에 @Component 붙여 -->
+	<!-- id는 class명 따라감 -->
+	<!-- @Component(value="")로 아이디 지정 가능 -->
+	<!-- @Autowired붙이면 그 클래스 이름 찾아서 의존성 주입해줌 -->
+	
+	<bean id="wheelBean" class="test01.Wheel">
+		<property name="radius" value="20"></property>
+	</bean>
+	<!-- @Autowired 날리고 실행해야함. @Autowired 붙이면 radius값이 두개인데 씨발 무슨 값을 보내라는건지 애가 모름 -->
+	<!-- 아니면 @Qualifier(value="") 해당 타입으로 bean이 여러개 있을때 id로 의존성 주입받을 bean을 고름-->
+	
+</beans>
