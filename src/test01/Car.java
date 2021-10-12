@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class Car {
 	
 	@Autowired
-	@Qualifier(value="wheelBean")
+	@Qualifier(value="wheelBeanQualifier")
 	private Wheel Wheel;
 	
 	public Car() {

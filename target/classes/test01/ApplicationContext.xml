@@ -12,7 +12,7 @@
 	<!-- @Component(value="")로 아이디 지정 가능 -->
 	<!-- @Autowired붙이면 그 클래스 이름 찾아서 의존성 주입해줌 -->
 	
-	<bean id="wheelBean" class="test01.Wheel">
+	<bean id="wheelBeanQualifier" class="test01.Wheel">
 		<property name="radius" value="20"></property>
 	</bean>
 	<!-- @Autowired 날리고 실행해야함. @Autowired 붙이면 radius값이 두개인데 씨발 무슨 값을 보내라는건지 애가 모름 -->
