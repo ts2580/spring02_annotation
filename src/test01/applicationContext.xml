@@ -11,6 +11,8 @@
 	<!-- id는 class명 따라감 -->
 	<!-- @Component(value="")로 아이디 지정 가능 -->
 	<!-- @Autowired붙이면 그 클래스 이름 찾아서 의존성 주입해줌 -->
+	<!-- @Autowired는 타입을 기준으로 빈을 찾아서 의존성 주입 -->
+	<!-- 해당 타입의 빈이 2개 이상일경우 빈의 id와 변수명을 기준으로 의존성 주입 -->
 	
 	<bean id="wheelBeanQualifier" class="test01.Wheel">
 		<property name="radius" value="20"></property>

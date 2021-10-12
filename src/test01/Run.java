@@ -7,7 +7,7 @@ public class Run {
 
 	public static void main(String[] args) {
 
-		ApplicationContext context = new ClassPathXmlApplicationContext("test01/ApplicationContext.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("test01/applicationContext.xml");
 		
 		System.out.println(context.getBean("car"));
 	}
